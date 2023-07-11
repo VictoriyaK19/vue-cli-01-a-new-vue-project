@@ -4,8 +4,14 @@
     <ul>
       <friend-contact 
       name="Manuel Lorenz"
-       phone-number="0123 45678 90"></friend-contact>
-      <friend-contact name="Julie" email-adress="julie@localhost.com"></friend-contact>
+       phone-number="0123 45678 90"
+       is-favorite="1"
+       ></friend-contact>
+      <friend-contact 
+      name="Julie" 
+      email-adress="julie@localhost.com"
+      is-favorite="0"
+      ></friend-contact>
     </ul>
   </section>
 </template>
