@@ -10,7 +10,7 @@
       <friend-contact 
       name="Julie" 
       email-adress="julie@localhost.com"
-      is-favorite="0"
+      
       ></friend-contact>
     </ul>
   </section>
