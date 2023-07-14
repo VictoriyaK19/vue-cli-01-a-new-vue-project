@@ -9,6 +9,7 @@
       <li><strong>Phone: </strong>{{ phoneNumber }}</li>
       <li><strong>Email: </strong>{{ emailAdress }}</li>
     </ul>
+    <button @click="$emit('delete', id)">Delete</button>
   </li>
 </template>
 
@@ -18,21 +19,22 @@ export default {
   props: {
     id: {
       type: String,
-      required: true
+      required: true,
     },
     name: {
       type: String,
-      required: true
+      required: true,
     },
     phoneNumber: {
       type: String,
-      required: true
-    },String,
+      required: true,
+    },
+    String,
     emailAdress: {
       type: String,
-      required: true
+      required: true,
     },
-    isFavorite:{
+    isFavorite: {
       type: Boolean,
       required: false,
       default: false,
@@ -41,7 +43,7 @@ export default {
       // }
     },
   },
-  emits: ["toggle-favorite"],
+  emits: ["toggle-favorite", "delete"],
   // emits: {
   //   'toggle-favorite': function(id) {
   //     if (id) {
@@ -54,7 +56,7 @@ export default {
   // },
   data() {
     return {
-      detailsAreVisible: false, 
+      detailsAreVisible: false,
     };
   },
   methods: {
@@ -62,7 +64,7 @@ export default {
       this.detailsAreVisible = !this.detailsAreVisible;
     },
     toggleFavorite() {
-      this.$emit('toggle-favorite', this.id);
+      this.$emit("toggle-favorite", this.id);
       // this.friendIsFavorite = !this.friendIsFavorite;
     },
   },
